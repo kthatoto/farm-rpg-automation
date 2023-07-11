@@ -8,7 +8,8 @@
   },
   "scripts": {
     "play": "playwright test",
-    "debug": "playwright codegen"
+    "debug": "playwright codegen",
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "dotenv": "^16.3.1"
