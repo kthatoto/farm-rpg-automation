@@ -1,18 +1,16 @@
 import { test } from '@playwright/test';
 import { login } from '#modules/login';
 import { goto } from '#modules/goto';
+import { buyMax } from '#modules/buyMax';
+import { setTimeout } from "timers/promises";
 
 test('shopping', async ({ page }) => {
   await login(page);
 
   await goto(page, 'https://farmrpg.com/index.php#!/store.php');
 
-  const potato = page.getByRole('listitem').filter({ hasText: 'Potato Seeds' });
-  const isPotatoFull = await potato.getByText('Inv Full').isVisible();
-  if (!isPotatoFull) {
-    await potato.getByRole('button', { name: '+MAX' }).click();
-    await potato.getByRole('button', { name: 'Potato Seeds' }).click();
-  }
+  buyMax(page, 'Potato Seeds');
+  // buyMax(page, 'Worms');
 
-  await page.pause();
+  await setTimeout(2000);
 });
