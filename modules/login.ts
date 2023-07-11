@@ -9,4 +9,5 @@ export const login = async (page: Page) => {
   await setTimeout(1000);
   await page.getByRole('button', { name: 'Login' }).click();
   await page.waitForURL("https://farmrpg.com/index.php");
+  await setTimeout(1000);
 };
