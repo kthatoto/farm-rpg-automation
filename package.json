@@ -8,8 +8,9 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
+    "debug": "playwright test --debug",
     "play": "playwright test",
-    "debug": "playwright codegen",
+    "codegen": "playwright codegen",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
