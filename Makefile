@@ -1,5 +1,5 @@
-shopping:
+play/shopping:
 	yarn play src/play/shopping.spec.ts
 
-fishing/farm-pond:
+play/fishing/farm-pond:
 	yarn play src/play/fishing/farm-pond.spec.ts
