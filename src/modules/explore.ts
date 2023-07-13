@@ -12,13 +12,13 @@ export const explore = async (page: Page, location: string) => {
       const itemInfo = ITEMS.find((i) => i.img === img);
       if (itemInfo) {
         const itemName = itemInfo.name;
-        console.log(itemName);
+        console.log('  ' + itemName);
         if (!gettingItems[itemName]) gettingItems[itemName] = 0;
         gettingItems[itemName]++;
       }
     }
-    console.log(JSON.stringify(gettingItems));
+    console.log('  ' + JSON.stringify(gettingItems));
     console.log(location);
-    await setTimeout(5000);
+    await setTimeout(3000);
   }
 };
