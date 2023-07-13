@@ -2,7 +2,7 @@ import { type Page } from "@playwright/test";
 import { setTimeout } from "timers/promises";
 import { ITEMS } from "src/data/items";
 
-export const explore = async (page: Page) => {
+export const explore = async (page: Page, location: string) => {
   const gettingItems = {};
   while (true) {
     await page.locator('.item-content.explorebtn').click();
@@ -18,6 +18,7 @@ export const explore = async (page: Page) => {
       }
     }
     console.log(JSON.stringify(gettingItems));
+    console.log(location);
     await setTimeout(4000);
   }
 };

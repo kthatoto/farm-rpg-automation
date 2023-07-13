@@ -4,5 +4,5 @@ import { explore } from '#modules/explore';
 
 test('exploring:highland-hills', async ({page}) => {
   await goto(page, 'https://farmrpg.com/#!/area.php?id=3');
-  await explore(page);
+  await explore(page, 'Highland Hills');
 });

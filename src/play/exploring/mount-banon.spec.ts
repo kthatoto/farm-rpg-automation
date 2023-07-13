@@ -4,5 +4,5 @@ import { explore } from '#modules/explore';
 
 test('exploring:mount-banon', async ({page}) => {
   await goto(page, 'https://farmrpg.com/#!/area.php?id=8');
-  await explore(page);
+  await explore(page, 'Mount Banon');
 });
