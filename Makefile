@@ -6,5 +6,7 @@ play/fishing/farm-pond:
 
 play/exploring/forest:
 	yarn play src/play/exploring/forest.spec.ts
+play/exploring/highland-hills:
+	yarn play src/play/exploring/highland-hills.spec.ts
 play/exploring/black-rock-canyon:
 	yarn play src/play/exploring/black-rock-canyon.spec.ts
