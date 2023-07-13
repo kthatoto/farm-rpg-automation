@@ -2,7 +2,10 @@ import { defineConfig, devices } from '@playwright/test';
 
 require('dotenv').config();
 
+const timeout = 6 * 60 * 60 * 1000;
+
 export default defineConfig({
+  timeout,
   testDir: './src/play',
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
