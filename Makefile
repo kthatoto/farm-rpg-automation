@@ -6,6 +6,8 @@ play/farming/potato:
 
 play/fishing/farm-pond:
 	yarn play src/play/fishing/farm-pond.spec.ts
+play/fishing/small-pond:
+	yarn play src/play/fishing/small-pond.spec.ts
 
 play/exploring/forest:
 	yarn play src/play/exploring/forest.spec.ts
