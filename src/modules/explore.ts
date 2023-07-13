@@ -19,7 +19,7 @@ export const explore = async (page: Page, location: string) => {
       }
     }
     console.log('  ' + JSON.stringify(gettingItems));
-    console.log(location, getTime());
+    console.log(`${location}(${getTime()})`);
     await setTimeout(3000);
   }
 };

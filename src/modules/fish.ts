@@ -23,7 +23,7 @@ export const fish = async (page: Page, location: string) => {
         const fishName = resultTextArray[resultTextArray.length - 1]
         if (fishName === lastFishName) return;
         lastFishName = fishName;
-        console.log(`${location}: ${fishName}`, getTime());
+        console.log(`${location}(${getTime()}): ${fishName}`);
       });
     }
   } catch (e) {
