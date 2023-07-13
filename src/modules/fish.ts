@@ -1,5 +1,6 @@
 import { type Page } from "@playwright/test";
 import { setTimeout } from "timers/promises";
+import { getTime } from "#utils/timestamp";
 
 export const fish = async (page: Page, location: string) => {
   try {
@@ -22,7 +23,7 @@ export const fish = async (page: Page, location: string) => {
         const fishName = resultTextArray[resultTextArray.length - 1]
         if (fishName === lastFishName) return;
         lastFishName = fishName;
-        console.log(`${location}: ${fishName}`);
+        console.log(`${location}: ${fishName}`, getTime());
       });
     }
   } catch (e) {

@@ -1,6 +1,7 @@
 import { type Page } from "@playwright/test";
 import { setTimeout } from "timers/promises";
 import { ITEMS } from "src/data/items";
+import { getTime } from "#utils/timestamp";
 
 export const explore = async (page: Page, location: string) => {
   const gettingItems = {};
@@ -18,7 +19,7 @@ export const explore = async (page: Page, location: string) => {
       }
     }
     console.log('  ' + JSON.stringify(gettingItems));
-    console.log(location);
+    console.log(location, getTime());
     await setTimeout(3000);
   }
 };
