@@ -11,7 +11,8 @@ export const fish = async (page: Page) => {
         if (!(await fish.isVisible())) return;
         try { await fish.click({force: true}); } catch {}
         for (const _ of new Array(30).fill(undefined)) {
-          await page.locator('.picker-modal > .picker-modal-inner > .fishing-block > .fc').click({position: {x: 275, y: 25}});
+          const fcs = await page.locator('.picker-modal > .picker-modal-inner > .fishing-block > .fc').all();
+          fcs[fcs.length - 1].click({position: {x: 275, y: 25}});
           await setTimeout(100);
         }
         await setTimeout(200);
