@@ -9,7 +9,8 @@
   },
   "scripts": {
     "debug": "playwright test --debug",
-    "play": "playwright test",
+    "play:shopping": "playwright test src/play/shopping.spec.ts",
+    "play:fishing": "playwright test src/play/fishing.spec.ts",
     "codegen": "playwright codegen",
     "tsc": "tsc --noEmit"
   },
