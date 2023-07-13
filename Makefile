@@ -1,6 +1,9 @@
 play/shopping:
 	yarn play src/play/shopping.spec.ts
 
+play/farming/potato:
+	yarn play src/play/farming/potato.spec.ts
+
 play/fishing/farm-pond:
 	yarn play src/play/fishing/farm-pond.spec.ts
 
