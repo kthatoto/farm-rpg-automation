@@ -12,3 +12,5 @@ play/exploring/misty-forest:
 	yarn play src/play/exploring/misty-forest.spec.ts
 play/exploring/black-rock-canyon:
 	yarn play src/play/exploring/black-rock-canyon.spec.ts
+play/exploring/ember-lagoon:
+	yarn play src/play/exploring/ember-lagoon.spec.ts
