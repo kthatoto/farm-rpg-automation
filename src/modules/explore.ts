@@ -15,9 +15,9 @@ export const explore = async (page: Page) => {
         console.log(itemName);
         if (!gettingItems[itemName]) gettingItems[itemName] = 0;
         gettingItems[itemName]++;
-        console.log(JSON.stringify(gettingItems));
       }
     }
-    await setTimeout(5000);
+    console.log(JSON.stringify(gettingItems));
+    await setTimeout(4000);
   }
 };
