@@ -10,7 +10,7 @@
   "scripts": {
     "debug": "playwright test --debug",
     "play:shopping": "playwright test src/play/shopping.spec.ts",
-    "play:fishing": "playwright test src/play/fishing.spec.ts",
+    "play:fishing:farm-pond": "playwright test src/play/fishing/farm-pond.spec.ts",
     "codegen": "playwright codegen",
     "tsc": "tsc --noEmit"
   },
