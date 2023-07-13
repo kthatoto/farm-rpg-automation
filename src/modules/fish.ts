@@ -8,11 +8,13 @@ export const fish = async (page: Page) => {
     fishes.forEach(async (fish) => {
       if (!(await fish.isVisible())) return;
       await fish.click({force: true});
-      await setTimeout(500);
-      for (const _ in new Array(30).fill(undefined)) {
+      for (const _ of new Array(30).fill(undefined)) {
         await page.locator('.fishing-block > .fc').click({position: {x: 275, y: 25}});
         await setTimeout(100);
       }
+      await setTimeout(1000);
+      const result = await page.locator('#consoletxt').first().innerText();
+      console.log(result);
     });
   }
 };
