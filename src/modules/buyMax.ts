@@ -1,5 +1,6 @@
 import { type Page } from "@playwright/test";
 import { isExistsOnLocator } from "#utils/isExists";
+import { setTimeout } from "timers/promises";
 
 export const buyMax = async (page: Page, itemName: string) => {
   const item = page.getByRole('listitem').filter({ hasText: itemName });
@@ -10,5 +11,6 @@ export const buyMax = async (page: Page, itemName: string) => {
     await page.getByText('Yes').click();
     await page.getByText('OK', { exact: true }).click();
     console.log('Bought', itemName, 'MAX!');
+    await setTimeout(1000);
   }
 };
