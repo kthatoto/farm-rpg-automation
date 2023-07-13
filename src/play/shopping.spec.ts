@@ -9,6 +9,7 @@ test('shopping', async ({ page }) => {
     console.log('~~~~~Shopping~~~~~')
     await goto(page, 'https://farmrpg.com/index.php#!/store.php');
     await buyMax(page, 'Potato Seeds');
+    await buyMax(page, 'Eggplant Seeds');
     await buyMax(page, 'Worms');
     console.log(getTime());
 

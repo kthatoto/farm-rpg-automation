@@ -3,6 +3,8 @@ play/shopping:
 
 play/farming/potato:
 	yarn play src/play/farming/potato.spec.ts
+play/farming/eggplant:
+	yarn play src/play/farming/eggplant.spec.ts
 
 play/fishing/farm-pond:
 	yarn play src/play/fishing/farm-pond.spec.ts
