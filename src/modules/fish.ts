@@ -17,7 +17,7 @@ export const fish = async (page: Page) => {
         }
         await setTimeout(200);
         const result = page.locator('#consoletxt').first();
-        const resultText = await result.innerText({ timeout: 100 });
+        const resultText = await result.innerText();
         const resultTextArray = resultText.split("\n");
         const fishName = resultTextArray[resultTextArray.length - 1]
         if (fishName === lastFishName) return;
