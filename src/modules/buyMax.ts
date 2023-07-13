@@ -9,5 +9,6 @@ export const buyMax = async (page: Page, itemName: string) => {
     await item.locator('button.buybtn').click();
     await page.getByText('Yes').click();
     await page.getByText('OK', { exact: true }).click();
+    console.log('Bought', itemName, 'MAX!');
   }
 };
