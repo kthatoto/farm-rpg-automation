@@ -1,4 +1,4 @@
-import { test as setup, type Page } from '@playwright/test';
+import { test as setup } from '@playwright/test';
 
 import { login } from '#modules/login';
 
