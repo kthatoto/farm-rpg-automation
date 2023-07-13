@@ -10,6 +10,6 @@ test('shopping', async ({ page }) => {
     await buyMax(page, 'Potato Seeds');
     await buyMax(page, 'Worms');
 
-    await setTimeout(10 * 1000);
+    await setTimeout(5 * 1000);
   }
 });
