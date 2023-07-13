@@ -19,6 +19,6 @@ export const explore = async (page: Page, location: string) => {
     }
     console.log(JSON.stringify(gettingItems));
     console.log(location);
-    await setTimeout(4000);
+    await setTimeout(5000);
   }
 };
