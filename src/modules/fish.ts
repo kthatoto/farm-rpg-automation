@@ -14,8 +14,10 @@ export const fish = async (page: Page) => {
           await setTimeout(100);
         }
         await setTimeout(1000);
-        const result = await page.locator('#consoletxt').first().innerText();
-        const fishName = result.split("\n");
+        const result = page.locator('#consoletxt').first();
+        const resultText = await result.innerText();
+        result.evaluate((dom) => dom.remove());
+        const fishName = resultText.split("\n");
         console.log(fishName[fishName.length - 1]);
       });
     }
