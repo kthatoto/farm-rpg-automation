@@ -6,6 +6,9 @@ play/farming/potato:
 play/farming/eggplant:
 	yarn play src/play/farming/eggplant.spec.ts
 
+play/temple/eggplant:
+	yarn play src/play/temple/eggplant.spec.ts
+
 play/fishing/farm-pond:
 	yarn play src/play/fishing/farm-pond.spec.ts
 play/fishing/small-pond:
