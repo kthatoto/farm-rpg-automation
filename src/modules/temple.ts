@@ -14,6 +14,8 @@ export const sacrifice = async (page: Page, url: string) => {
       await page.getByText('Yes').click();
       await page.getByText('OK', { exact: true }).click();
       console.log(`Sacrificed! (${getTime()})`);
+    } else {
+      console.log('No items sacrificed...');
     }
     await setTimeout(2 * 60 * 1000);
   }
