@@ -8,7 +8,7 @@ export const sacrifice = async (page: Page, url: string) => {
   while (true) {
     await goto(page, url);
     const selector = '.button.sacrificebtn';
-    const hasItems = isExistsOnPage(page, selector);
+    const hasItems = await isExistsOnPage(page, selector);
     if (hasItems) {
       await page.locator(selector).click();
       await page.getByText('Yes').click();
