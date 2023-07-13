@@ -9,6 +9,8 @@ export const sacrifice = async (page: Page) => {
     const hasItems = isExistsOnPage(page, selector);
     if (hasItems) {
       await page.locator(selector).click();
+      await page.getByText('Yes').click();
+      await page.getByText('OK', { exact: true }).click();
       console.log(`Sacrificed! (${getTime()})`);
     }
     await setTimeout(2 * 60 * 1000);
