@@ -2,10 +2,10 @@ import { Locator, Page } from "@playwright/test";
 
 export const isExistsOnLocator = async (locator: Locator, selector: string) => {
   try {
-    locator.locator(selector).isVisible();
-    return true;
-  } catch {
+    await locator.locator(selector).isVisible();
     return false;
+  } catch {
+    return true;
   }
 };
 
