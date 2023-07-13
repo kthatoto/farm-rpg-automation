@@ -25,6 +25,8 @@ play/fishing/emerald-beach:
 	yarn play src/play/fishing/emerald-beach.spec.ts
 play/fishing/vast-ocean:
 	yarn play src/play/fishing/vast-ocean.spec.ts
+play/fishing/lake-minerva:
+	yarn play src/play/fishing/lake-minerva.spec.ts
 
 play/exploring/forest:
 	yarn play src/play/exploring/forest.spec.ts
