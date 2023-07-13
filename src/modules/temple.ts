@@ -1,10 +1,12 @@
 import { type Page } from "@playwright/test";
+import { goto } from '#modules/goto';
 import { setTimeout } from "timers/promises";
 import { isExistsOnPage } from "#utils/isExists";
 import { getTime } from "#utils/timestamp";
 
-export const sacrifice = async (page: Page) => {
+export const sacrifice = async (page: Page, url: string) => {
   while (true) {
+    await goto(page, url);
     const selector = '.button.sacrificebtn';
     const hasItems = isExistsOnPage(page, selector);
     if (hasItems) {
