@@ -16,7 +16,6 @@ export const fish = async (page: Page) => {
         await setTimeout(1000);
         const result = page.locator('#consoletxt').first();
         const resultText = await result.innerText();
-        result.evaluate((dom) => dom.remove());
         const fishName = resultText.split("\n");
         console.log(fishName[fishName.length - 1]);
       });
