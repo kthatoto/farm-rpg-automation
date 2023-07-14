@@ -28,6 +28,8 @@ play/fishing/vast-ocean:
 play/fishing/lake-minerva:
 	yarn play src/play/fishing/lake-minerva.spec.ts
 
+play/exploring/general:
+	yarn play src/play/exploring/general.spec.ts
 play/exploring/forest:
 	yarn play src/play/exploring/forest.spec.ts
 play/exploring/small-cave:

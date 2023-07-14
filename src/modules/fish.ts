@@ -1,6 +1,7 @@
 import { type Page } from "@playwright/test";
 import { setTimeout } from "timers/promises";
 import { getTime } from "#utils/timestamp";
+import { nTimes } from "#utils/nTimes";
 
 export const fish = async (page: Page, location: string) => {
   try {
@@ -11,11 +12,11 @@ export const fish = async (page: Page, location: string) => {
       fishes.forEach(async (fish) => {
         if (!(await fish.isVisible())) return;
         try { await fish.click({force: true}); } catch {}
-        for (const _ of new Array(30).fill(undefined)) {
+        await nTimes(async () => {
           const fcs = await page.locator('.picker-modal > .picker-modal-inner > .fishing-block > .fc').all();
           fcs[fcs.length - 1].click({position: {x: 275, y: 25}});
           await setTimeout(100);
-        }
+        }, 30);
         await setTimeout(200);
         const result = page.locator('#consoletxt').first();
         const resultText = await result.innerText();
