@@ -3,7 +3,7 @@ import { goto } from '#modules/goto';
 import { exploreN } from '#modules/explore';
 
 const n = 50;
-const interval = 300;
+const interval = 1000;
 test('exploring:general', async ({page}) => {
   while (true) {
     await goto(page, 'https://farmrpg.com/#!/area.php?id=7');

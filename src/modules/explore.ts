@@ -16,7 +16,8 @@ export const exploreN = async (page: Page, location: string, n: number = 1, inte
     await page.locator('.item-content.explorebtn').click();
     const resultItems = await page.locator('#exploreconsole > #consoletxt > img').all();
     for (const item of resultItems) {
-      const img = await item.getAttribute('src');
+      const img = await item.getAttribute('src', { timeout: 1000 }).catch(() => null);
+      if (!img) continue;
       const itemInfo = ITEMS.find((i) => i.img === img);
       if (itemInfo) {
         const itemName = itemInfo.name;
