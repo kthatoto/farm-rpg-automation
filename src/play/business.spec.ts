@@ -5,8 +5,8 @@ import { getTime } from '#utils/timestamp';
 import { nTimes } from '#utils/nTimes';
 
 import { buyMax } from '#modules/buyMax';
-import { farmingAll } from '#modules/farming';
-import { sacrifice } from '#modules/temple';
+import { farmingAllN } from '#modules/farming';
+import { sacrificeN } from '#modules/temple';
 
 test('business', async ({ page }) => {
   while (true) {
@@ -21,8 +21,8 @@ test('business', async ({ page }) => {
     }, 10);
 
     await goto(page, 'https://farmrpg.com/#!/xfarm.php?id=286431');
-    await farmingAll(page, 'Eggplant');
+    await farmingAllN(page, 'Eggplant', 1, 1000);
 
-    await sacrifice(page, 'https://farmrpg.com/#!/templeitem.php?id=13');
+    await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=13', 1, 1000);
   }
 });
