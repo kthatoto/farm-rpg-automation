@@ -21,8 +21,9 @@ test('business', async ({ page }) => {
     }, 10);
 
     await goto(page, 'https://farmrpg.com/#!/xfarm.php?id=286431');
-    await farmingAllN(page, 'Eggplant', 1, 1000);
+    await farmingAllN(page, 'Potato', 1, 1000);
 
-    await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=13', 1, 1000);
+    await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=565', 1, 1000); // Hot Potato
+    await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=48', 1, 1000); // Potato
   }
 });
