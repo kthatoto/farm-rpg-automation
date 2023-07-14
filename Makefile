@@ -1,19 +1,28 @@
-play/business:
-	yarn play src/play/business.spec.ts
+# trace
+play/fishing/farm-pond/trace:
+	yarn play:trace src/play/fishing/farm-pond.spec.ts
 play/business/trace:
 	yarn play:trace src/play/business.spec.ts
 
+# General
+play/business:
+	yarn play src/play/business.spec.ts
 play/shopping:
 	yarn play src/play/shopping.spec.ts
+play/exploring/general:
+	yarn play src/play/exploring/general.spec.ts
 
+# Farming
 play/farming/potato:
 	yarn play src/play/farming/potato.spec.ts
 play/farming/eggplant:
 	yarn play src/play/farming/eggplant.spec.ts
 
+# Temple
 play/temple/eggplant:
 	yarn play src/play/temple/eggplant.spec.ts
 
+# Fishing
 play/fishing/farm-pond:
 	yarn play src/play/fishing/farm-pond.spec.ts
 play/fishing/small-pond:
@@ -33,8 +42,7 @@ play/fishing/vast-ocean:
 play/fishing/lake-minerva:
 	yarn play src/play/fishing/lake-minerva.spec.ts
 
-play/exploring/general:
-	yarn play src/play/exploring/general.spec.ts
+# Exploring
 play/exploring/forest:
 	yarn play src/play/exploring/forest.spec.ts
 play/exploring/small-cave:
