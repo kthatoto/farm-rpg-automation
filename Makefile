@@ -1,3 +1,5 @@
+play/business:
+	yarn play src/play/business.spec.ts
 play/shopping:
 	yarn play src/play/shopping.spec.ts
 
