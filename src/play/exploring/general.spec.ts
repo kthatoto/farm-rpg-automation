@@ -2,12 +2,18 @@ import { test } from '@playwright/test';
 import { goto } from '#modules/goto';
 import { exploreN } from '#modules/explore';
 
-const n = 10;
-const interval = 500;
+const n = 50;
+const interval = 300;
 test('exploring:general', async ({page}) => {
   while (true) {
     await goto(page, 'https://farmrpg.com/#!/area.php?id=7');
     await exploreN(page, 'Forest', n, interval);
+
+    await goto(page, 'https://farmrpg.com/#!/area.php?id=1');
+    await exploreN(page, 'Small Cave', n, interval);
+
+    await goto(page, 'https://farmrpg.com/#!/area.php?id=2');
+    await exploreN(page, 'Small Spring', n, interval);
 
     await goto(page, 'https://farmrpg.com/#!/area.php?id=3');
     await exploreN(page, 'Highland Hills', n, interval);
