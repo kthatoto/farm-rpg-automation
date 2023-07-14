@@ -10,6 +10,7 @@
   "scripts": {
     "debug": "playwright test --debug",
     "play": "playwright test",
+    "play:trace": "playwright test --trace on",
     "codegen": "playwright codegen",
     "tsc": "tsc --noEmit"
   },
