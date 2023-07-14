@@ -6,7 +6,7 @@ import { nTimes } from '#utils/nTimes';
 
 import { buyMax } from '#modules/buyMax';
 import { farmingAllN } from '#modules/farming';
-import { sacrificeN } from '#modules/temple';
+// import { sacrificeN } from '#modules/temple';
 
 test('business', async ({ page }) => {
   while (true) {
@@ -17,15 +17,15 @@ test('business', async ({ page }) => {
       await buyMax(page, 'Eggplant Seeds');
       await buyMax(page, 'Worms');
       console.log(getTime());
-      await setTimeout(5 * 1000);
+      await setTimeout(6 * 1000);
     }, 10);
 
     console.log('~~~~~Farming~~~~~')
     await goto(page, 'https://farmrpg.com/#!/xfarm.php?id=286431');
     await farmingAllN(page, 'Potato', 1, 1000);
 
-    console.log('~~~~~Temple~~~~~')
-    await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=565', 1, 1000); // Hot Potato
-    await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=48', 1, 1000); // Potato
+    // console.log('~~~~~Temple~~~~~')
+    // await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=565', 1, 1000); // Hot Potato
+    // await sacrificeN(page, 'https://farmrpg.com/#!/templeitem.php?id=48', 1, 1000); // Potato
   }
 });
