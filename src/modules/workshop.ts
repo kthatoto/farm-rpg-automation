@@ -13,8 +13,8 @@ export const craftAll = async (page: Page, itemName: string) => {
 
   const creatable = await isExistsOnPage(page, buttonSelector);
   if (creatable) {
-    await page.locator(buttonSelector).click();
     const quantity = await page.locator(quantitySelector).getAttribute('value');
+    await page.locator(buttonSelector).click();
     console.log(`(${time}) Crafted ${quantity} ${itemName}`);
   } else {
     console.log(`(${time}) Skip craft ${itemName}...`);
