@@ -12,6 +12,8 @@ export const ITEMS = [
   { id: 77, img: "/img/items/5711.PNG", name: "Shimmer Stone" },
   { id: 76, img: "/img/items/5782.PNG", name: "Unpolished Shimmer Stone" },
   { id: 110, img: "/img/items/5987.PNG", name: "Leather" },
+  { id: 193, img: "/img/items/5624.png", name: "Rope" },
+  { id: 194, img: "/img/items/7748.png", name: "Fishing Net" },
 
   // Forest
   { id: 35, img: "/img/items/6143.PNG", name: "Wood" },
