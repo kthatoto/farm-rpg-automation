@@ -24,8 +24,8 @@ test('exploring:general', async ({page}) => {
     // await goto(page, 'https://farmrpg.com/#!/area.php?id=5');
     // await exploreN(page, 'Misty Forest', n, interval);
 
-    // await goto(page, 'https://farmrpg.com/#!/area.php?id=6');
-    // await exploreN(page, 'Black Rock Canyon', n, interval);
+    await goto(page, 'https://farmrpg.com/#!/area.php?id=6');
+    await exploreN(page, 'Black Rock Canyon', n, interval);
 
     await goto(page, 'https://farmrpg.com/#!/area.php?id=8');
     await exploreN(page, 'Mount Banon', n, interval);
