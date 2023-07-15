@@ -1,5 +1,18 @@
-
 export const ITEMS = [
+  // Workshop
+  { id: 368, img: "/img/items/lantern.png", name: "Lantern" },
+  { id: 388, img: "/img/items/4241.png", name: "Hourglass" },
+  { id: 301, img: "/img/items/7275.png", name: "Fancy Pipe" },
+  { id: 305, img: "/img/items/salt.png", name: "Salt" },
+  { id: 387, img: "/img/items/am_t_01.png", name: "Sand" },
+  { id: 95, img: "/img/items/ironring.png", name: "Iron Ring" },
+  { id: 163, img: "/img/items/6172-1.png", name: "Twine" },
+  { id: 117, img: "/img/items/7727.PNG", name: "Glass Bottle" },
+  { id: 78, img: "/img/items/5708.PNG", name: "Glass Orb" },
+  { id: 77, img: "/img/items/5711.PNG", name: "Shimmer Stone" },
+  { id: 76, img: "/img/items/5782.PNG", name: "Unpolished Shimmer Stone" },
+  { id: 110, img: "/img/items/5987.PNG", name: "Leather" },
+
   // Forest
   { id: 35, img: "/img/items/6143.PNG", name: "Wood" },
   { id: 43, img: "/img/items/mushroom.png", name: "Mushroom" },

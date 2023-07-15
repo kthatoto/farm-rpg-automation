@@ -11,6 +11,8 @@ play/shopping:
 	yarn play src/play/shopping.spec.ts
 play/exploring/general:
 	yarn play src/play/exploring/general.spec.ts
+play/workshop:
+	yarn play src/play/workshop/general.spec.ts
 
 # Farming
 play/farming/potato:
