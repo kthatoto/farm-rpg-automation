@@ -7,7 +7,7 @@ const interval = 1000;
 test('exploring:general', async ({page}) => {
   while (true) {
     await goto(page, 'https://farmrpg.com/#!/area.php?id=7');
-    await exploreN(page, 'Forest', n, interval);
+    await exploreN(page, 'Forest', n * 5, interval);
 
     // await goto(page, 'https://farmrpg.com/#!/area.php?id=1');
     // await exploreN(page, 'Small Cave', n, interval);
@@ -16,7 +16,7 @@ test('exploring:general', async ({page}) => {
     // await exploreN(page, 'Small Spring', n, interval);
 
     await goto(page, 'https://farmrpg.com/#!/area.php?id=3');
-    await exploreN(page, 'Highland Hills', n, interval);
+    await exploreN(page, 'Highland Hills', n * 5, interval);
 
     // await goto(page, 'https://farmrpg.com/#!/area.php?id=4');
     // await exploreN(page, 'Cane Pole Ridge', n, interval);
