@@ -7,7 +7,7 @@ import { nTimes } from "#utils/nTimes";
 const gettingItems = {};
 export const explore = async (page: Page, location: string, interval: number = 3000) => {
   while (true) {
-    exploreN(page, location, 1, interval);
+    await exploreN(page, location, 1, interval);
   }
 };
 

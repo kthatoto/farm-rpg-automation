@@ -7,7 +7,7 @@ import { nTimes } from "#utils/nTimes";
 
 export const sacrifice = async (page: Page, url: string, interval: number = 2 * 60 * 1000) => {
   while (true) {
-    sacrificeN(page, url, 1, interval);
+    await sacrificeN(page, url, 1, interval);
   }
 };
 

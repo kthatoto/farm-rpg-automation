@@ -5,7 +5,7 @@ import { nTimes } from "#utils/nTimes";
 
 export const farmingAll = async (page: Page, seedName: string, interval: number = 20 * 1000) => {
   while (true) {
-    farmingAllN(page, seedName, 1, interval);
+    await farmingAllN(page, seedName, 1, interval);
   }
 };
 
