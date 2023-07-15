@@ -11,6 +11,8 @@ import { craftAll } from '#modules/workshop';
 
 test('business', async ({ page }) => {
   while (true) {
+    let i = 0;
+    const n = 5;
     await nTimes(async () => {
       await goto(page, 'https://farmrpg.com/index.php#!/store.php');
       console.log('~~~~~Shopping~~~~~')
@@ -18,8 +20,10 @@ test('business', async ({ page }) => {
       await buyMax(page, 'Eggplant Seeds');
       await buyMax(page, 'Worms');
       console.log(getTime());
-      await setTimeout(6 * 1000);
-    }, 10);
+
+      i++;
+      if (i < n) await setTimeout(10 * 1000);
+    }, n);
 
     console.log('~~~~~Farming~~~~~')
     await goto(page, 'https://farmrpg.com/#!/xfarm.php?id=286431');
